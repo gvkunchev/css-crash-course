@@ -1,0 +1,406 @@
+/* Main */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+pre {
+    padding: 5px;
+}
+
+body {
+    background-color: #ebf4f6;
+    font-size: 20px;
+    color: #5e5656;
+    font-family: "Georgia", serif;
+}
+
+a {
+    color: #5e5656 !important;
+}
+
+a:hover {
+    color: #76b4bd !important;
+}
+
+.clear {
+    clear: both;
+}
+
+/* Header */
+
+.header {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    width: 20%;
+    min-width: 500px;
+    margin: 0 auto;
+    border-bottom: 3px solid #58668b;
+    border-radius: 50%;
+}
+
+/* Sections */
+
+.section {
+    display: inline-block;
+    vertical-align: top;
+}
+
+
+/* Section Left */
+
+.section-left{
+    width: 15%;
+    margin-top: 60px;
+}
+
+.section-left li{
+    margin: 3px 5px;
+}
+
+.section-left li:hover{
+    color: #76b4bd;
+}
+
+.section-left li::before{
+    content: "\2022";
+    margin: 5px;
+    list-style-type: none;
+}
+
+.section-left ul{
+    border-left: 3px solid #58668b;
+    padding: 30px 0px;
+    margin: 5px;
+    border-radius: 10%;
+    list-style-type: none;
+}
+
+.section-left label{
+    cursor: pointer;
+    user-select: none;
+}
+
+
+/* Section Right */
+
+.section-right{
+    width: 70%;
+}
+
+/* Dynamic Controls */
+
+[name=page_controller] {
+    display: none;
+}
+
+.page {
+    display: none;
+    opacity: 1;
+    animation-name: fadeInOpacity;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: 0.5s;
+}
+
+#page_0:checked ~ .page-0 {
+    display: block;
+}
+
+#page_1:checked ~ .page-1 {
+    display: block;
+}
+
+#page_2:checked ~ .page-2 {
+    display: block;
+}
+
+#page_3:checked ~ .page-3 {
+    display: block;
+}
+
+#page_4:checked ~ .page-4 {
+    display: block;
+}
+
+#page_5:checked ~ .page-5 {
+    display: block;
+}
+
+#page_6:checked ~ .page-6 {
+    display: block;
+}
+
+#page_7:checked ~ .page-7 {
+    display: block;
+}
+
+#page_8:checked ~ .page-8 {
+    display: block;
+}
+
+#page_9:checked ~ .page-9 {
+    display: block;
+}
+
+#page_10:checked ~ .page-10 {
+    display: block;
+}
+
+#page_11:checked ~ .page-11 {
+    display: block;
+}
+
+#page_12:checked ~ .page-12 {
+    display: block;
+}
+
+#page_13:checked ~ .page-13 {
+    display: block;
+}
+
+#page_14:checked ~ .page-14 {
+    display: block;
+}
+
+#page_15:checked ~ .page-15 {
+    display: block;
+}
+
+#page_16:checked ~ .page-16 {
+    display: block;
+}
+
+#page_17:checked ~ .page-17 {
+    display: block;
+}
+
+#page_18:checked ~ .page-18 {
+    display: block;
+}
+
+
+@keyframes fadeInOpacity {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Hovers */
+
+.hoverable-option {
+    position: relative;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.hoverable-option content{
+    display: none;
+    z-index: 1;
+}
+
+.hoverable-option:hover content {
+    display: block;
+    position: absolute;
+    background-color: #ebf4f6;
+    border: 3px solid #58668b;
+    border-radius: 10px;
+    padding: 5px;
+    box-shadow: 0px 0px 1000px 150px white;
+}
+
+content {
+    white-space: nowrap;
+}
+
+/* Pages */
+
+.page-0 {
+    text-align: center;
+    font-size: 11rem;
+    color: #58668b;
+    line-height: 3em;
+    text-shadow: 5px 5px rgba(94, 86, 86, 0.3);
+}
+
+.page fieldset {
+    border: 1px solid #58668b;
+    width: 100%;
+    padding: 10px;
+    margin-top: 50px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px 10px #ebf4f6 inset;
+}
+
+.page legend {
+    padding: 5px;
+    color: #58668b;
+}
+
+.fieldset-content {
+    padding: 5px;
+    font-size: 1.5rem;
+}
+
+.fieldset-content ul {
+    margin: 1em 2em;
+}
+
+/* Examples */
+
+.example-container {
+    border: 1px solid black;
+    padding: 10px;
+    margin: 10px;
+}
+
+.example-1 {
+    background-color: #b3ffb3;
+    color: black;
+    padding: 4px;
+    border: 1px solid black;
+}
+
+.example-2 {
+    background-color: green;
+    color: white;
+    padding: 4px;
+    border: 1px solid black;
+}
+
+.example-block {
+    display: block;
+}
+
+.example-inline {
+    display: inline;
+}
+.example-inline-block {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+    line-height: 1em;
+}
+
+.position-example-container {
+    margin: 20px;
+    border: 1px solid black;
+    position: relative;
+    padding: 10px;
+}
+
+.position-example-fixed-container {
+    margin: 20px;
+    border: 1px solid black;
+    position: relative;
+    padding: 10px;
+    height: 80px;
+    overflow-y: scroll;
+}
+
+.position-example-static {
+    width: 50px;
+    height: 50px;
+    background-color: #b3ffb3;
+    border: 1px solid black;
+}
+
+.position-example-relative {
+    width: 50px;
+    height: 50px;
+    left: 20px;
+    top: 20px;
+    position: relative;
+    background-color: #b3ffb3;
+    border: 1px solid black;
+}
+
+.position-example-absolute {
+    width: 50px;
+    height: 50px;
+    left: 10px;
+    top: 10px;
+    position: absolute;
+    background-color: #b3ffb3;
+    border: 1px solid black;
+}
+
+.position-example-fixed {
+    width: 60px;
+    height: 20px;
+    left: 30px;
+    top: 30px;
+    position: absolute;
+    background-color: #b3ffb3;
+    border: 1px solid black;
+    z-index: 1;
+}
+
+.position-example-fixed-content {
+    height: 200px;
+    width: 50px;
+}
+
+.position-example-container-absolute {
+    margin: 45px;
+}
+
+.floating-example {
+    border: 3px solid black;
+    padding: 10px;
+    width: 400px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.floating-image {
+    float: left;
+    width: 60px;
+    margin: 5px;
+}
+
+.overflow-container {
+    width: 100px;
+    padding: 3px;
+    border: 1px solid black;
+    word-wrap: nowrap;
+}
+
+.overflow-container-visible {
+    overflow-x: visible;
+}
+
+.overflow-container-hidden {
+    overflow-x: hidden;
+}
+
+.overflow-container-scroll {
+    overflow-x: scroll;
+}
+
+/* Jokes */
+.joke-container {
+    width: 600px;
+    height: 400px;
+    margin: 10px auto;
+    border: 1px solid black;
+    animation: bg-slide 20s linear infinite;
+    overflow: hidden;
+}
+
+.jokes {
+    animation: images 60s linear infinite;
+}
+
+
+@keyframes images {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+}

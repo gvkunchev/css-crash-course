@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Crash Course</title>
+    <link href="css/general.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="header">
+        CSS Crash Course
+    </div>
+    <div class="section section-left">
+        <ul>
+            <li><label for="page_1">Introduction</label></li>
+            <li><label for="page_2">Defining CSS</label></li>
+            <li><label for="page_3">Syntax</label></li>
+            <li><label for="page_4">Selectors</label></li>
+            <li><label for="page_5">Selector Combinations</label></li>
+            <li><label for="page_6">Browser Prefixes</label></li>
+            <li><label for="page_7">Media queries</label></li>
+            <li><label for="page_8">Properties</label></li>
+            <li><label for="page_9">Box model</label></li>
+            <li><label for="page_10">Units</label></li>
+            <li><label for="page_11">Display</label></li>
+            <li><label for="page_12">Position</label></li>
+            <li><label for="page_13">Float</label></li>
+            <li><label for="page_14">Clear</label></li>
+            <li><label for="page_15">Overflow</label></li>
+            <li><label for="page_16">Center alignment</label></li>
+            <li><label for="page_17">Transform</label></li>
+            <li><label for="page_18">Q&A</label></li>
+        </ul>
+    </div>
+
+    <div class="section section-right">
+        <input id="page_0" type="radio" name="page_controller" checked="checked"/>
+        <input id="page_1" type="radio" name="page_controller"/>
+        <input id="page_2" type="radio" name="page_controller"/>
+        <input id="page_3" type="radio" name="page_controller"/>
+        <input id="page_4" type="radio" name="page_controller"/>
+        <input id="page_5" type="radio" name="page_controller"/>
+        <input id="page_6" type="radio" name="page_controller"/>
+        <input id="page_7" type="radio" name="page_controller"/>
+        <input id="page_8" type="radio" name="page_controller"/>
+        <input id="page_9" type="radio" name="page_controller"/>
+        <input id="page_10" type="radio" name="page_controller"/>
+        <input id="page_11" type="radio" name="page_controller"/>
+        <input id="page_12" type="radio" name="page_controller"/>
+        <input id="page_13" type="radio" name="page_controller"/>
+        <input id="page_14" type="radio" name="page_controller"/>
+        <input id="page_15" type="radio" name="page_controller"/>
+        <input id="page_16" type="radio" name="page_controller"/>
+        <input id="page_17" type="radio" name="page_controller"/>
+        <input id="page_18" type="radio" name="page_controller"/>
+
+        <div class="page page-0">
+            Welcome
+        </div>
+        <div class="page page-1">
+            <fieldset>
+                <legend>Introduction</legend>
+                <div class="fieldset-content">
+                    CSS = <b>C</b>ascading <b>S</b>tyle <b>S</b>heets
+                    <br/><br/>
+                    A language used to describe how a ML document should be presented.
+                    <br/><br/>
+                    The language can define different presentation for different viewports.
+                    <br/><br/>
+                    Mostly used with HTML web pages so this presentation will focus on web applications.
+                </div>
+            </fieldset>
+        </div>
+        <div class="page page-2">
+            <fieldset>
+                <legend>Defining CSS</legend>
+                <div class="fieldset-content">
+                    CSS can be defined in three different ways:
+                    <ul>
+                        <li>
+                            <span class="hoverable-option">
+                                Inline
+                                <content>
+                                        &lt;div <b>style="color: red;"</b>&gt;This is example.&lt;/div&gt;
+                                </content>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="hoverable-option">
+                                Internal
+                                <content>
+<pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+<b>
+&lt;style&gt;
+ .some-element {
+    border: 1px solid red;
+  }
+&lt;/style&gt;
+</b>
+&lt;/head&gt;
+&lt;body&gt;
+...
+</pre>
+                                </content>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="hoverable-option">
+                                External
+                                <content>
+<pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  <b>&lt;link href="css/general.css" rel="stylesheet"</b> type="text/css" /&gt;
+&lt;/head&gt;
+&lt;body&gt;
+...
+</pre>
+                                </content>
+                            </span>
+                        </li>
+                    </ul>
+                    In Decipher's context you can also use LESS files.
+                    <br/><br/>
+                    LESS gives you extra functionality like defining variables, creating loops and nesting CSS definitions.
+                </div>
+            </fieldset>
+        </div>
+        <div class="page page-3">
+            <fieldset>
+                <legend>Syntax</legend>
+                <div class="fieldset-content">
+                    CSS works by applying properties to elements that match a specific selector.
+                    <br/><br/>
+                    CSS uses the Sizzle engine for selectors.
+                    <br/><br/>
+                    The properties and their values are defined by CSS itself.
+                    <br/><br/>
+<pre>
+SELECTOR {
+  PROPERTY: VALUE;
+  PROPERTY: VALUE;
+}
+</pre>
+                </div>
+            </fieldset>
+        </div>
+        <div class="page page-4">
+            <fieldset>
+                <legend>Selectors</legend>
+                <div class="fieldset-content">
+                    The basic selectors that you can use are the following:
+                    <br/>
+                    <ul>
+                        <li>
+                            <span class="hoverable-option">
+                                All elements
+                                <content>
+<pre>
+* {
+  display: block
+}
+</pre>
+                                </content>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="hoverable-option">
+                                Name
+                                <content>
+<pre>
+tagname {
+  display: block
+}
+</pre>
+                                </content>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="hoverable-option">
+                                ID
+                                <content>
+<pre>
+#nodeID {
+  display: block
+}
+</pre>
+                                </content>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="hoverable-option">
+                                Class
+                                <content>
+<pre>
+.node-class {
+  display: block
+}
+</pre>
+                                </content>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="hoverable-option">
+                                Attribute
+                                <content>
+<pre>
+[nodeAttribute=value] {
+  display: block
+}
+</pre>
+                                    <br/>
+                                    You can also use:
+                                    <br/>
+                                    [attribute]
+                                    <br/>
+                                    [attribute=value]
+                                    <br/>
+                                    [attribute^=value]
+                                    <br/>
+                                    [attribute$=value]
+                                    <br/>
+                                    [attribute*=value]
+                                </content>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="hoverable-option">
+                                Pseudo
+                                <content>
+<pre>
+a:hover {
+  color: red;
+}
+</pre>
+                                    <br/>
+                                    Other pseudo selectors are:
+                                    <br/>
+                                    ::after
+                                    <br/>
+                                    ::before
+                                    <br/>
+                                    :checked
+                                    <br/>
+                                    :disabled
+                                    <br/>
+                                    :focus
+                                    <br/>
+                                    :nth-child(n)
+                                    <br/>
+                                    :not(selector)
+                                </content>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </fieldset>
+        </div>
+        <div class="page page-5">
+            <fieldset>
+                <legend>Selector Combinations</legend>
+                <div class="fieldset-content">
+                    You can combine selectors to achieve complex results.
+                    <br/><br/>
+                    div.selected
+                    <br/>
+                    div .selected
+                    <br/>
+                    div, .selected
+                    <br/>
+                    div > .selected
+                    <br/><br/>
+                    The source of the CSS, as well as the selector type and complexity, determines the priority of the property.
+                    <br/><br/>
+                    You can bring a property higher in the priority list like so:
+                    <br/><br/>
+<pre>
+div.selected {
+  background-color: red <b>!important</b>;
+}
+</pre>
+                </div>
+            </fieldset>
+        </div>
+        <div class="page page-6">
+            <fieldset>
+                <legend>Browser Prefixes</legend>
+                <div class="fieldset-content">
+                    In order to achieve compatibility and a way of introducing new features to CSS, web-browser developers came up with prefixes.
+                    <br/>
+                    These are mostly used for CSS3 properties that are still not finalized officially.
+                    <br/>
+                    <ul>
+                    <li>Safari: <b>-webkit-</b></li>
+                    <li>Chrome: <b>-webkit-</b></li>
+                    <li>Internet Explorer: <b>-ms-</b></li>
+                    <li>Opera: <b>-o-</b></li>
+                    <li>Firefox: <b>-moz-</b></li>
+                    <li>Android: <b>-webkit-</b></li>
+                    <li>iOS: <b>-webkit-</b></li>
+                    </ul>
+                    Example:
+                    <br/>
+<pre>
+.no-select {
+  -webkit-user-select: none;  /* Chrome all / Safari all */
+  -moz-user-select: none;     /* Firefox all */
+  -ms-user-select: none;      /* IE 10+ */
+  user-select: none;          /* Likely future */  
+}
+</pre>
+                </div>
+            </fieldset>
+        </div>
+        <div class="page page-7">
+            <fieldset>
+                <legend>Media queries</legend>
+                <div class="fieldset-content">
+                    This is a feature that allows us to define different styling for different devices/vewports/orientation/resolution.
+                    <br/><br/>
+                    The syntax is as follows:
+                    <br/>
+<pre>
+@media not|only mediatype and (mediafeature and|or|not mediafeature) {
+  CSS-Code;
+}
+</pre>
+                    <br/><br/>
+                    Mostly used to control the look for different screen sizes. For example
+                    <br/>
+<pre>
+@media screen and (max-width: 768px) {
+  div.example {
+    display: block;
+  }
+}
+</pre>
+                </div>
+            </fieldset>
+        </div>
+        <div class="page page-8">
+            <fieldset>
+                <legend>Properties</legend>
+                <div class="fieldset-content">
+                    Styling includes many, many properties that control color, size, shape, shadow, position and so on.
+                    <br/><br/>
+                    I suggest using <a href="https://www.w3schools.com/css" target="_blank">https://www.w3schools.com/css</a> as a reference point.
+                    <br/><br/>
+                    It contains all you need to know:
+                        <ul>
+                            <li>List of properties</li>
+                            <li>List of values for a property</li>
+                            <li>Default property value</li>
+                            <li>Browser compatibility</li>
+                            <li>Examples</li>
+                        </ul>
+                    <a href="https://caniuse.com" target="_blank">https://caniuse.com</a> can be used as more detailed compatibility source of information.
+                </div>
+            </fieldset>
+        </div>
+        <div class="page page-9">
+            <fieldset>
+                <legend>Box model</legend>
+                <div class="fieldset-content">
+                    Each element in HTML is using the following model when rendering.
+                    <br/><br/>
+                    <img src="img/css-box-model.png" />
+                    <br/><br/>
+                    You can control the way the width/height of an element are parsed using the box-sizing property.
+                    <br/><br/>
+                    content-box - The margin/padding are <b>NOT</b> taken into account. (default value)
+                    <br/>
+                    border-box - The margin/padding are taken into account.
+                </div>
+            </fieldset>
+        </div>
+        <div class="page page-10">
+            <fieldset>
+                <legend>Units</legend>
+                <div class="fieldset-content">
+                    When defining sizes you can use a lot of units. Most of the time, we use the following:
+                    <br/>
+                    <ul>
+                        <li>px (Absolute unit)</li>
+                        <li>%</li>
+                        <li>em</li>
+                        <li>rem</li>
+                    </ul>
+                    Colors can be defined using the following formats.
+                    <ul>
+                        <li>
+                          <span class="hoverable-option">
+                            HEX
+                            <content>#32CD32</content>
+                          </span>
+                        </li>
+                        <li>
+                         <span class="hoverable-option">
+                           Color name
+                           <content>tomato</content>
+                          </span>
+                        </li>
+                        <li>
+                          <span class="hoverable-option">
+                            RGB
+                            <content>(123, 124, 125)</content>
+                          </span>
+                        </li>
+                        <li>
+                          <span class="hoverable-option">
+                            RGBA (Not recommended)
+                            <content>(123, 124, 125, 0.5)</content>
+                          </span>
+                        </li>
+                    </ul>
+                </div>
+            </fieldset>
+        </div>
+        <div class="page page-11">
+            <fieldset>
+                <legend>Display</legend>
+                <div class="fieldset-content">
+                    One of the most important properties of an element is <b>display</b>.
+                    <br/><br/>
+                    There are many possible values, but most of them are still not safe so we use the following:
+                    <br/><br/>
+                    Block;
+                    <br/>
+                    <div class="example-container">
+                        <div class="example-block example-1">Element</div>
+                        <br/>
+                        <div class="example-block example-2">Element</div>
+                    </div>
+                    <br/>
+                    Inline;
+                    <br/>
+                    <div class="example-container">
+                        <div class="example-inline example-1">Element</div>
+                        <div class="example-inline example-2">Element</div>
+                    </div>
+                    <br/>
+                    Inline-block;
+                    <br/>
+                    <div class="example-container">
+                        <div class="example-inline-block example-1">Element</div>
+                        <div class="example-inline-block example-2">Element</div>
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+        <div class="page page-12">
+            <fieldset>
+                <legend>Position</legend>
+                <div class="fieldset-content">
+                    Along with <b>display</b>, <b>position</b> is one of the most common properties to adjust the elements' style. The property controls the layout and flow of the elements on the page
+                    <br/><br/>
+                    The property has the following values:
+                    <ul>
+                        <li>
+                            <span class="hoverable-option">
+                                Static
+                                <content>
+                                    <div class="position-example-container">
+                                        <div class="position-example-static">
+                                        </div>
+                                    </div>
+                                </content>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="hoverable-option">
+                                Relative
+                                <content>
+                                    <div class="position-example-container">
+                                        <div class="position-example-relative">
+                                        </div>
+                                    </div>
+                                </content>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="hoverable-option">
+                                Absolute
+                                <content>
+                                    <div class="position-example-container position-example-container-absolute">
+                                        <div class="position-example-absolute">
+                                        </div>
+                                    </div>
+                                </content>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="hoverable-option">
+                                Fixed
+                                <content>
+                                    <div class="position-example-fixed">
+                                    </div>
+                                    <div class="position-example-fixed-container">
+                                        <div class="position-example-fixed-content">
+                                        </div>
+                                    </div>
+                                </content>
+                            </span>
+                        </li>
+                        <li>sticky (Don't use)</li>
+                    </ul>
+                </div>
+            </fieldset>
+        </div>
+        <div class="page page-13">
+            <fieldset>
+                <legend>Float</legend>
+                <div class="fieldset-content">
+                    The <b>float</b> property allows you to adjust the flow of the page so that the text can wrap around the floated element.
+                    <br/><br/>
+                    You can float an element to the left or to the right of its container.
+                    <br/><br/>
+                    Example of floating element:
+                    <br/><br/>
+                    <div class="floating-example">
+                        <img class="floating-image" src="img/css_logo.png" />
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+        <div class="page page-14">
+            <fieldset>
+                <legend>Clear</legend>
+                <div class="fieldset-content">
+                    Sometimes the floating element is bigger that the rest of the content so you need to <b>clear</b> the floating and fix the normal flow of the elements.
+                    <br/><br/>
+                    Not cleared:
+                    <div class="floating-example">
+                        <img class="floating-image" src="img/css_logo.png" />
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </div>
+                    <br/><br/>
+                    Cleared:
+                    <div class="floating-example">
+                        <img class="floating-image" src="img/css_logo.png" />
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+        <div class="page page-15">
+            <fieldset>
+                <legend>Overflow</legend>
+                <div class="fieldset-content">
+                    Whenever the container is smaller than the content, you need to consider the <b>overflow</b> property.
+                    <br/>
+                    The values are as follows:
+                    <ul>
+                        <li>
+                            <span class="hoverable-option">
+                                Visible
+                                <content>
+                                    <div class="overflow-container overflow-container-visible">
+                                        THIS IS OVERFLOWING TEXT.
+                                    </div>
+                                </content>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="hoverable-option">
+                                Hidden
+                                <content>
+                                    <div class="overflow-container overflow-container-hidden">
+                                        THIS IS OVERFLOWING TEXT.
+                                    </div>
+                                </content>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="hoverable-option">
+                                Scroll
+                                <content>
+                                    <div class="overflow-container overflow-container-scroll">
+                                        THIS IS OVERFLOWING TEXT.
+                                    </div>
+                                </content>
+                            </span>
+                        </li>
+                        <li>Auto</li>
+                    </ul>
+                    <br/>
+                    * Same applies for overflow-x, overflow-y which control the property for each axes separately.
+                </div>
+            </fieldset>
+        </div>
+        <div class="page page-16">
+            <fieldset>
+                <legend>Center alignment</legend>
+                <div class="fieldset-content">
+                    Horizontal alignment is easy:
+                    <br/>
+                    <ul>
+                        <li>Use text-align: center; on the parent for the inline elements.</li>
+                        <li>Use margin: 0 auto; on the element itself for the block elements</li>
+                    </ul>
+                    <br/>
+                    Vertical alignment can be tricky.
+                    <br/>
+                    Consider the following ways:
+                    <ul>
+                        <li>Table</li>
+                        <li>Table with table-cell</li>
+                        <li>Line-height</li>
+                        <li>Padding</li>
+                </div>
+            </fieldset>
+        </div>
+        <div class="page page-17">
+            <fieldset>
+                <legend>Transform</legend>
+                <div class="fieldset-content">
+                    Most of the values for transform are not yet widely supported, but it's worth knowing they exist.
+                    <br/><br/>
+                    You can safely use scale() which can make some old styles mobile compatible.
+                </div>
+            </fieldset>
+        </div>
+        <div class="page page-18">
+            <fieldset>
+                <legend>Q&A</legend>
+                <div class="fieldset-content">
+                    Any questions?
+                    <div class="joke-container">
+                        <img src="img/jokes.png" class="jokes" />
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+    </div>
+</body>
+</html>

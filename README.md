@@ -1,2 +1,3 @@
-# css-crash-course
-CSS Crash Course in HTML+CSS
+# CSS Crash Course in HTML+CSS  
+
+Created as part of training sessions for the Decipher survey platform.
